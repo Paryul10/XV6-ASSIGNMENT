@@ -90,8 +90,24 @@ sys_uptime(void)
   return xticks;
 }
 
-int 
+int  
 sys_details(void)
 {
   return details();
+}
+
+int
+sys_chpri(void)
+{
+  int pid,pri;
+  if(argint(0,&pid)<0)
+  {
+    return -1;
+  }
+  if(argint(1,&pri)<0)
+  {
+    return -1;
+  }
+
+  return chpri(pid,pri);
 }

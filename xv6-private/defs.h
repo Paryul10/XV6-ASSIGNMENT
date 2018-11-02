@@ -188,5 +188,7 @@ void            clearpteu(pde_t *pgdir, char *uva);
 
 
 int 			details(void);
+
+int             chpri(int pid,int pri);
 // number of elements in fixed-size array
 #define NELEM(x) (sizeof(x)/sizeof((x)[0]))
